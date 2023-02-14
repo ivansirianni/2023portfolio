@@ -1,0 +1,45 @@
+[
+    {
+        "name": "E-commerce",
+        "tech": "HTML5, CSS3, JAVASCRIPT, MATERIAL UI, BOOTSTRAP, REACT JS",
+        "repo": "https://github.com/ivansirianni/coder-final-react.git",
+        "deploy": "https://app.netlify.com/sites/fanciful-tanuki-d7a419/overview",
+        "img": "./ecommerce/404.png"
+    },
+    {
+        "name": "Hogwarts DataBase",
+        "tech": "HTML5, CSS3, JAVASCRIPT, BOOTSTRAP",
+        "repo": "https://github.com/ivansirianni/HP-DATABASE.git",
+        "deploy": "https://ivansirianni.github.io/HP-DATABASE/",
+        "img": "./assets/hp.png"
+    },
+    {
+        "name": "To Do app - Notes",
+        "tech": "HTML5, CSS3, JAVASCRIPT",
+        "repo": "https://github.com/ivansirianni/App-notas.git",
+        "deploy": "https://ivansirianni.github.io/App-notas/",
+        "img": "./assets/notas.png"
+    },
+    {
+        "name": "Weather App",
+        "tech": "HTML5, CSS3, JAVASCRIPT",
+        "repo": "https://github.com/ivansirianni/app-clima.git",
+        "deploy": "https://ivansirianni.github.io/app-clima/",
+        "img": "./assets/clima.png"
+    },
+    {
+        "name": "404 Error Page",
+        "tech": "HTML5, CSS3",
+        "repo": "https://github.com/ivansirianni/404.git",
+        "deploy": "https://ivansirianni.github.io/404/",
+        "img": "./assets/404.png"
+    },
+    {
+        "name": "Restaurant Payment",
+        "tech": "HTML5, JAVASCRIPT",
+        "repo": "https://github.com/ivansirianni/desafio-bucle-condicional-funcion.git",
+        "deploy": "https://ivansirianni.github.io/desafio-bucle-condicional-funcion/",
+        "img": "./assets/gestion.png"
+    }
+
+]

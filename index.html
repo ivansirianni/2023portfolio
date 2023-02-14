@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+      <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+      <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+       <!-- Compiled and minified CSS -->
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header__container">
+        <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+              <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                  <!-- Mobile menu button-->
+                  <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Menu</span>
+                    <!--
+                      Icon when menu is closed.
+          
+                      Heroicon name: outline/bars-3
+          
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!--
+                      Icon when menu is open.
+          
+                      Heroicon name: outline/x-mark
+          
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  <div class="flex flex-shrink-0 items-center">
+                    <a href=""><img class="block h-8 w-auto lg:hidden" src="https://cdn-icons-png.flaticon.com/512/1157/1157109.png" alt="Your Company"></a>
+                    <a href=""><img class="hidden h-8 w-auto lg:block" src="https://cdn-icons-png.flaticon.com/512/1157/1157109.png" alt="Your Company"></a>
+                  </div>
+                  <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                      <a href="#me" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">About Me</a>
+          
+                      <a href="#projects" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+          
+                      <a href="#skills" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+          
+                      <a href="#follow" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Follow Me</a>
+                    </div>
+                  </div>
+                </div>              
+                                              
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+              <div class="space-y-1 px-2 pt-2 pb-3">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#me" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">About Me </a>
+          
+                <a href="#projects" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+          
+                <a href="#skills" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+          
+                <a href="#follow" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Follow Me </a>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main class="main__container">
+        <section>
+            <div id="me" class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+                <img src="https://e0.pxfuel.com/wallpapers/422/349/desktop-wallpaper-programmer-s-life-developer-and-mobile-life-development-dark-developer.jpg" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1097 845" aria-hidden="true" class="hidden transform-gpu blur-3xl sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:w-[68.5625rem]">
+                  <path fill="url(#10724532-9d81-43d2-bb94-866e98dd6e42)" fill-opacity=".2" d="M301.174 646.641 193.541 844.786 0 546.172l301.174 100.469 193.845-356.855c1.241 164.891 42.802 431.935 199.124 180.978 195.402-313.696 143.295-588.18 284.729-419.266 113.148 135.13 124.068 367.989 115.378 467.527L811.753 372.553l20.102 451.119-530.681-177.031Z" />
+                  <defs>
+                    <linearGradient id="10724532-9d81-43d2-bb94-866e98dd6e42" x1="1097.04" x2="-141.165" y1=".22" y2="363.075" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#776FFF" />
+                      <stop offset="1" stop-color="#FF4694" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1097 845" aria-hidden="true" class="absolute left-1/2 -top-52 -z-10 w-[68.5625rem] -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0">
+                  <path fill="url(#8ddc7edb-8983-4cd7-bccb-79ad21097d70)" fill-opacity=".2" d="M301.174 646.641 193.541 844.786 0 546.172l301.174 100.469 193.845-356.855c1.241 164.891 42.802 431.935 199.124 180.978 195.402-313.696 143.295-588.18 284.729-419.266 113.148 135.13 124.068 367.989 115.378 467.527L811.753 372.553l20.102 451.119-530.681-177.031Z" />
+                  <defs>
+                    <linearGradient id="8ddc7edb-8983-4cd7-bccb-79ad21097d70" x1="1097.04" x2="-141.165" y1=".22" y2="363.075" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#776FFF" />
+                      <stop offset="1" stop-color="#FF4694" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                  <div class="mx-auto max-w-2xl lg:mx-0">
+                    <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Iván Sirianni - Frontend Developer</h2>
+                    <p class="mt-6 text-lg leading-8 text-gray-300">When the pandemy began I seriously asked myself: "What would i do of my life? Should I keep on my confort zone by doing all that it was supposed to do to get an stable life? Or should I do what makes me happy and I really enjoy?"</p>
+                    <p class="mt-6 text-lg leading-8 text-gray-300">From that point I decided to study to be a programmer. i started doing it by myself and in 2022 I did the "Frontend React Development Career" in Coderhouse.</p>
+                  </div>
+                  <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+                    <div class="grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">                    
+              
+                      <a class="link-home" href="#projects">Projects <span aria-hidden="true">&rarr;</span></a>
+              
+                      <a class="link-home" href="#">Skills <span aria-hidden="true">&rarr;</span></a>
+              
+                      <a class="link-home" href="#">Follow Me <span aria-hidden="true">&rarr;</span></a>
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+        </section>
+        
+        <section class="section__pro">
+            <div class="isolate ">  
+                             
+                  <div class="relative px-6 lg:px-8">
+                    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                      <div class="hidden sm:mb-8 sm:flex sm:justify-center">                        
+                      </div>
+                      <div class="text-center">
+                        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl section__h1">I would like you to see my projects</h1>
+                        <p class="mt-6 text-lg leading-8 text-gray-600 section__p">Check all the projects below. Click on button to see them all</p>
+                        
+                                </div>
+                              </div>
+                            </div>
+
+                        </div>                     
+                       
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+                      <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678">
+                        <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+                        <defs>
+                          <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#9089FC" />
+                            <stop offset="1" stop-color="#FF80B5" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
+                  <div id="projects" class="cards__container">
+                    
+                    <!--Card-->
+                    <div class="cards">
+                        <div class="col s12 m7">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="./assets/ecommerce.png">                                      
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">ECOMMERCE</span>
+                                <h4>Technologies</h4>
+                              <p>HTML5, CSS3, JAVASCRIPT, MATERIAL UI, BS, REACT</p>
+                            </div>
+                            <div class="card-action">
+                              <a href="https://github.com/ivansirianni/coder-final-react.git"><i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="GitHub Repository">folder</i></a>
+                              <a href="https://app.netlify.com/sites/fanciful-tanuki-d7a419/overview"><i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="Web Deploy">language</i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                       <!--Card-->
+                    <div class="cards">
+                        <div class="col s12 m7">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="./assets/hp.png">                                      
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">HOGWARTS DATABASE</span>
+                                <h4>Technologies</h4>
+                              <p>HTML5, CSS3, JAVASCRIPT</p>
+                            </div>
+                            <div class="card-action">
+                              <a href="https://github.com/ivansirianni/HP-DATABASE.git"><i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="GitHub Repository">folder</i></a>
+                              <a href="https://ivansirianni.github.io/HP-DATABASE/"><i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="Web Deploy">language</i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                         <!--Card-->
+                    <div class="cards">
+                        <div class="col s12 m7">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="./assets/notas.png">                                      
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">TO DO APP - NOTES</span>
+                                <h4>Technologies</h4>
+                              <p>HTML5, CSS3</p>
+                            </div>
+                            <div class="card-action">
+                              <a href="https://github.com/ivansirianni/App-notas.git"><i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="GitHub Repository">folder</i></a>
+                              <a href="https://ivansirianni.github.io/App-notas/"><i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="Web Deploy">language</i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                           <!--Card-->
+                    <div class="cards">
+                        <div class="col s12 m7">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="./assets/clima.png">                                      
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">WEATHER APP</span>
+                                <h4>Technologies</h4>
+                              <p>HTML5, CSS3, JAVASCRIPT, BOOTSTRAP</p>
+                            </div>
+                            <div class="card-action">
+                              <a href="https://github.com/ivansirianni/app-clima.git"><i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="GitHub Repository">folder</i></a>
+                              <a href="https://ivansirianni.github.io/app-clima/"><i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="Web Deploy">language</i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                        <!--Card-->
+                    <div class="cards">
+                        <div class="col s12 m7">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="./assets/404.png">                                      
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">404 ERROR SKIN</span>
+                                <h4>Technologies</h4>
+                              <p>HTML5, CSS3</p>
+                            </div>
+                            <div class="card-action">
+                              <a href="https://github.com/ivansirianni/404.git"><i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="GitHub Repository">folder</i></a>
+                              <a href="https://ivansirianni.github.io/404/"><i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="Web Deploy">language</i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                         <!--Card-->
+                    <div class="cards">
+                        <div class="col s12 m7">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="./assets/gestion.png">                                      
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">PAYMENT SIMULATOR</span>
+                                <h4>Technologies</h4>
+                              <p>HTML5, JAVASCRIPT</p>
+                            </div>
+                            <div class="card-action">
+                              <a href="https://github.com/ivansirianni/404.git"><i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="GitHub Repository">folder</i></a>
+                              <a href="https://ivansirianni.github.io/404/"><i class="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="Web Deploy">language</i></a>
+                            </div>
+                          </div>
+                </div>
+        </section>
+
+        <section id="skills">
+            <div class="bg-white py-24 sm:py-32">
+                <div class="mx-auto grid max-w-7xl gap-y-20 gap-x-8 px-6 lg:px-8 xl:grid-cols-3">
+                  <div class="max-w-2xl">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">My Skills</h2>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">I would like to share with you some of my soft and tech skills</p>
+                  </div>
+                  <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+                    <li>
+                      <div class="flex items-center gap-x-6">
+                        <img class="h-16 w-16 " src="https://raw.githubusercontent.com/gist/tracend/3798496/raw/640a549782e952bdbe31fbb41f819fa96240de42/HTML5_SF.svg" alt="">
+                        <div>
+                          <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">HTML5</h3>
+                          <p class="text-sm font-semibold leading-6 text-indigo-600">Tech Skill</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center gap-x-6">
+                          <img class="h-16 w-16 " src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="">
+                          <div>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">CSS3</h3>
+                            <p class="text-sm font-semibold leading-6 text-indigo-600">Tech Skill</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="flex items-center gap-x-6">
+                          <img class="h-16 w-16 " src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png" alt="">
+                          <div>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">JAVASCRIPT</h3>
+                            <p class="text-sm font-semibold leading-6 text-indigo-600">Tech Skill</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="flex items-center gap-x-6">
+                          <img class="h-16 w-16 " src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="">
+                          <div>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">REACT JS</h3>
+                            <p class="text-sm font-semibold leading-6 text-indigo-600">Tech Skill</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="flex items-center gap-x-6">
+                          <img class="h-16 w-16 " src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
+                          <div>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">GITHUB</h3>
+                            <p class="text-sm font-semibold leading-6 text-indigo-600">Tech Skill</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="flex items-center gap-x-6">
+                          <img class="h-16 w-16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png" alt="">
+                          <div>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">CSS FRAMEWORKS</h3>
+                            <p class="text-sm font-semibold leading-6 text-indigo-600">Tech Skill</p>
+                          </div>
+                        </div>
+                      </li>
+                      <div class="flex items-center gap-x-6">
+                        <img class="h-16 w-16" src="https://us.123rf.com/450wm/glopphy/glopphy1702/glopphy170200058/glopphy170200058.jpg?ver=6" alt="">
+                        <div>
+                          <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">TEAMWORK</h3>
+                          <p class="text-sm font-semibold leading-6 text-green-600">Soft Skill</p>
+                        </div>
+                      </div>
+                    </li>
+                </li>
+                            <div class="flex items-center gap-x-6">
+                            <img class="h-16 w-16" src="https://i.pinimg.com/564x/e3/25/68/e325685df62f3438cdc6ce40c33d0fe6.jpg" alt="">
+                            <div>
+                                <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">PROBLEM SOLVING</h3>
+                                <p class="text-sm font-semibold leading-6 text-green-600">Soft Skill</p>
+                            </div>
+                            </div>
+                        </li>
+                        </li>
+                        <div class="flex items-center gap-x-6">
+                        <img class="h-16 w-16" src="https://cdn-icons-png.flaticon.com/512/732/732258.png" alt="">
+                        <div>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">COMMUNICATION</h3>
+                            <p class="text-sm font-semibold leading-6 text-green-600">Soft Skill</p>
+                        </div>
+                        </div>
+                    </li>
+                    </li>
+                    <div class="flex items-center gap-x-6">
+                    <img class="h-16 w-16" src="https://us.123rf.com/450wm/denysdrozd/denysdrozd2107/denysdrozd210700036/171267130-adaptation-vector-icon-adapt-illustration-sign-change-symbol-adaptability-logo-.jpg" alt="">
+                    <div>
+                        <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">ADAPTABILITY</h3>
+                        <p class="text-sm font-semibold leading-6 text-green-600">Soft Skill</p>
+                    </div>
+                    </div>
+                </li>
+            </li>
+            <div class="flex items-center gap-x-6">
+              <img class="h-16 w-16" src="https://cdn2.iconfinder.com/data/icons/business-intelligence-5/66/44-512.png" alt="">
+              <div>
+                <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">CRITICAL THINKING</h3>
+                <p class="text-sm font-semibold leading-6 text-green-600">Soft Skill</p>
+              </div>
+            </div>
+          </li>
+        </li>
+        <div class="flex items-center gap-x-6">
+          <img class="h-16 w-16" src="https://static.vecteezy.com/system/resources/previews/005/307/841/original/time-management-icon-free-vector.jpg" alt="">
+          <div>
+            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">TIME MANAGEMENT</h3>
+            <p class="text-sm font-semibold leading-6 text-green-600">Soft Skill</p>
+          </div>
+        </div>
+      </li>
+              
+                    <!-- More people... -->
+                  </ul>
+                </div>
+              </div>
+        </section>
+
+        <section id="follow">
+          <div class="overflow-hidden bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+              <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                <div class="lg:pr-8 lg:pt-4">
+                  <div class="lg:max-w-lg">
+                    <h2 class="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Keep in touch</h2>
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Follow me on my Social Networks</p>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">Please follow me on my Social Networks and let's start talking about our next project! Let's take it into the next level.</p>
+                    <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                      <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+                        <li>
+                          <div class="flex items-center gap-x-6">
+                            <a href="https://www.facebook.com/ivan.sirianni/"><img class="h-16 w-16 rounded-full ico" src="https://www.facebook.com/images/fb_icon_325x325.png" alt=""></a>
+                            <div>
+                              <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Facebook</h3>                              
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex items-center gap-x-6">
+                            <a href="https://www.instagram.com/ivanfeds/"><img class="h-16 w-16 rounded-full ico" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt=""></a>
+                            <div>
+                              <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Instagram</h3>                              
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex items-center gap-x-6">
+                            <a href="https://www.linkedin.com/in/ivansirianni/"><img class="h-16 w-16 rounded-full ico" src="https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw" alt=""></a>
+                            <div>
+                              <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Linkedin</h3>                              
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex items-center gap-x-6">
+                            <a href="https://github.com/ivansirianni?tab=repositories"><img class="h-16 w-16 rounded-full ico" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""></a>
+                            <div>
+                              <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">GitHub</h3>                              
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </dl>
+                  </div>
+                </div>
+                <img src="https://ticnegocios.camaravalencia.com/wp-content/uploads/2020/12/social-media-gety.jpg" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1000">
+              </div>
+            </div>
+          </div>
+        </section>        
+        
+    </main>
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+          <div class="box">
+              <figure>
+                  <a href="#home">
+                      <img class="footer__img" src="https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png" alt="Logo de SLee Dw">
+                  </a>
+              </figure>
+          </div>
+          <div class="box">
+              <h2>More Info</h2>
+              <p>Do you want to know more about web developing?</p>
+              <p>Contact me, and let's get in touch</p>
+          </div>
+          <div class="box">
+              <h2>Follow Me</h2>
+              <div class="red-social">
+                  <a href="https://www.facebook.com/ivan.sirianni/" class="fa fa-facebook"></a>
+                  <a href="https://www.instagram.com/ivanfeds/" class="fa fa-instagram"></a>
+                  <a href="https://www.linkedin.com/in/ivansirianni/" class="fa fa-linkedin"></a>
+                  <a href="https://github.com/ivansirianni?tab=repositories" class="fa fa-github"></a>
+              </div>
+          </div>
+      </div>
+      <div class="grupo-2">
+          <small>&copy; 2023 <b>IvoDev</b> - All rights reserved.</small>
+      </div>
+  </footer>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
