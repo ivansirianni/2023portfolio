@@ -8,7 +8,7 @@
 .cards{
     width: 30vw;
     min-height: 60vh;
-    
+    margin-bottom: 5%;
 }
 .cards:hover{
     transform: scale(1.03);
