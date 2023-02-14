@@ -32,74 +32,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header__container">
-        <nav class="bg-gray-800">
-            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-              <div class="relative flex h-16 items-center justify-between">
-                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <!-- Mobile menu button-->
-                  <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="sr-only">Menu</span>
-                    <!--
-                      Icon when menu is closed.
-          
-                      Heroicon name: outline/bars-3
-          
-                      Menu open: "hidden", Menu closed: "block"
-                    -->
-                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                    <!--
-                      Icon when menu is open.
-          
-                      Heroicon name: outline/x-mark
-          
-                      Menu open: "block", Menu closed: "hidden"
-                    -->
-                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                  <div class="flex flex-shrink-0 items-center">
-                    <a href=""><img class="block h-8 w-auto lg:hidden" src="https://cdn-icons-png.flaticon.com/512/1157/1157109.png" alt="Your Company"></a>
-                    <a href=""><img class="hidden h-8 w-auto lg:block" src="https://cdn-icons-png.flaticon.com/512/1157/1157109.png" alt="Your Company"></a>
-                  </div>
-                  <div class="hidden sm:ml-6 sm:block">
-                    <div class="flex space-x-4">
-                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                      <a href="#me" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">About Me</a>
-          
-                      <a href="#projects" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-          
-                      <a href="#skills" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Skills</a>
-          
-                      <a href="#follow" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Follow Me</a>
-                    </div>
-                  </div>
-                </div>              
-                                              
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <!-- Mobile menu, show/hide based on menu state. -->
-            <div class="sm:hidden" id="mobile-menu">
-              <div class="space-y-1 px-2 pt-2 pb-3">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#me" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">About Me </a>
-          
-                <a href="#projects" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-          
-                <a href="#skills" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
-          
-                <a href="#follow" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Follow Me </a>
-              </div>
-            </div>
-          </nav>
+  <nav>
+    
+    <ul id="slide-out" class="sidenav">    
+      <li><div class="user-view">
+        <div class="background">
+          <img src="https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png">
+        </div>
+        <a href="#user"><img class="circle" src="./assets/1660910517587.jpg"></a>
+        <a href="#name"><span class="white-text name">Iván Sirianni</span></a>
+        <a href="#email"><span class="white-text email">Frontend Dev</span></a>
+      </div></li>
+      <li><a href="#home"><i class="material-icons">place</i>Home</a></li>
+      <li><a href="#projects"><i class="material-icons">view_module</i>Projects</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="#skills"><i class="material-icons">wb_incandescent</i>Skills</a></li>
+      <li><a href="#follow"><i class="material-icons">thumb_up</i>Follow</a></li>
+    </ul>
+
+  </nav>
+
+  <div class="nav-item">
+    <a href="#" data-target="slide-out" class="menu-m sidenav-trigger"><i class="material-icons">menu</i></a>
+    <a href="#home" class="nav-a"><img src="https://cdn.dribbble.com/users/2592071/screenshots/7327591/logo-artboard_2_4x_4x.png" class="nav-img"></a>
+  </div>
+      </nav>
     </header>
 
     <main class="main__container">
@@ -152,8 +109,8 @@
                       <div class="hidden sm:mb-8 sm:flex sm:justify-center">                        
                       </div>
                       <div class="text-center">
-                        <h1 class="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl section__h1">I would like you to see my projects</h1>
-                        <p class="mt-6 text-lg leading-8 text-white-600 section__p">Check all the projects below. Click on button to see them all</p>
+                        <h1 class="text-4xl font-bold tracking-tight text-grey-900 sm:text-6xl section__h1">I would like you to see my projects</h1>
+                        <p class="mt-6 text-lg leading-8 text-grey-600 section__p">Check all the projects below. Click on button to see them all</p>
                         
                                 </div>
                               </div>

@@ -28,16 +28,10 @@
 }
 /*section project*/
 .section__pro{
-    height: auto;
-    background-image: url("https://www.exascaleproject.org/wp-content/uploads/2019/11/PathForward-scaled.jpg");
+    height: 120%;
+   margin-top: -15%
 }
-.section__h1{
-    color: white;
-    margin-top: -15%;
-}
-.section__p{
-    color: white;
-}
+
 /*FOOTER*/
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
@@ -111,13 +105,7 @@
         grid-gap:30px;
         padding: 35px 0px;
     }
-    .section__h1{
-        color: white;
-        margin-top: -15%;
-    }
-    .section__p{
-        color: white;
-    }
+   
 }
 
 /*RESPONSIVE*/
@@ -138,11 +126,27 @@
     .card-image img{
         height: 20vh;
     }
-    .section__h1{
-        color: white;
-        margin-top: -15%;
-    }
-    .section__p{
-        color: white;
-    }
+   
+}
+nav{
+    background-color: black;    
+}
+.menu-m{
+    margin-left: 5%;
+    font-size: 2rem;
+    margin-top: 2%;
+    color: yellow;
+}
+.nav-img{
+    width: 120px;
+    height: 100px;
+    
+}
+.nav-item{
+    display: flex;
+    flex-direction: row;
+    background:black;
+}
+.nav-a{
+    margin-left: 35%;
 }
